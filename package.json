@@ -1,0 +1,24 @@
+{
+  "name": "monitor",
+  "version": "1.0.0",
+  "description": "monitor",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Proxtx/monitor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Proxtx/monitor/issues"
+  },
+  "homepage": "https://github.com/Proxtx/monitor#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "os-utils": "0.0.14"
+  }
+}

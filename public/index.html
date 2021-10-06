@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="logon">
+      <div class="box backgroundBlue">
+        <h1 class="boxTitle">Monitor</h1>
+        <input placeholder="password" class="input" type="password" />
+      </div>
+    </div>
+    <div id="main component">
+      <div class="box backgroundBlue">
+        <h1 class="boxTitle">Monitor</h1>
+      </div>
+      <div class="widgetBox backgroundOrange">
+        <h1 class="widgetBoxTitle">HARDWARE</h1>
+        <div class="widgetProperty">
+          CPU
+          <div class="widgetValue">{cpuUsage}%</div>
+        </div>
+        <div class="widgetProperty">
+          RAM
+          <div class="widgetValue">{ramUsed}mb</div>
+        </div>
+        <div class="widgetProperty">
+          ADD
+          <div class="widgetValue">{add}</div>
+        </div>
+      </div>
+      <div class="widgetBox backgroundRed">
+        <h1 class="widgetBoxTitle">SOFTWARE</h1>
+        <div class="widgetProperty">
+          USER
+          <div class="widgetValue">{userName}</div>
+        </div>
+        <div class="widgetProperty">
+          DIST
+          <div class="widgetValue">{osName}</div>
+        </div>
+        <div class="widgetProperty">
+          UP
+          <div class="widgetValue">{uptime}m</div>
+        </div>
+      </div>
+      <div class="widgetBox backgroundGrey">
+        <h1 class="widgetBoxTitle">SERVICE</h1>
+        <button class="widgetButton">OPEN</button>
+      </div>
+    </div>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

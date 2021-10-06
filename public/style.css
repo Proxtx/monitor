@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #808cff;
+  --orange: #ffa34f;
+  --red: #db5461;
+  --grey: #615d6c;
+  --textBright: #f9f5ff;
+  --textDark: #3a3042;
+  --backgroundOpacity: rgba(255, 255, 255, 0.37);
+}
+
+@font-face {
+  font-family: Righteous;
+  src: url("Righteous-Regular.ttf");
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("Roboto-Regular.ttf");
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
+  left: 0%;
+  position: absolute;
+}
+
+#main {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 100%;
+  transition: 0.5s;
+}
+
+#logon {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 100%;
+  transition: 0.5s;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  padding: 45px;
+  font-family: Righteous;
+  margin-top: 30px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.boxTitle {
+  color: var(--textBright);
+  font-size: 300%;
+}
+
+.input {
+  background-color: var(--backgroundOpacity);
+  border: 0;
+  border-radius: 5px;
+  margin-top: 16px;
+  width: 200px;
+  height: 30px;
+  font-family: Righteous;
+  text-align: center;
+  color: var(--textBright);
+}
+
+.widgetBox {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  padding: 45px;
+  padding-bottom: calc(34px - 17px);
+  font-family: "Roboto", Montserrat;
+  color: var(--textDark);
+  border-radius: 11px;
+  margin-top: 30px;
+}
+
+.widgetBoxTitle {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  font-family: Righteous;
+  line-height: 0.75;
+  font-size: 250%;
+}
+
+.widgetProperty {
+  background-color: var(--backgroundOpacity);
+  width: 210px;
+  height: 40px;
+  border-radius: 4px;
+  letter-spacing: 01em;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 17px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.widgetValue {
+  width: 70px;
+  height: 22px;
+  border-radius: 3px;
+  background-color: var(--backgroundOpacity);
+  font-family: Righteous;
+  display: flex;
+  justify-content: center;
+  letter-spacing: normal;
+}
+
+.widgetButton {
+  background-color: var(--backgroundOpacity);
+  width: 210px;
+  height: 40px;
+  border-radius: 4px;
+  letter-spacing: 01em;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 17px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 0;
+}
+
+.backgroundBlue {
+  background-color: var(--blue);
+}
+
+.backgroundOrange {
+  background-color: var(--orange);
+}
+
+.backgroundRed {
+  background-color: var(--red);
+}
+
+.backgroundGrey {
+  background-color: var(--grey);
+}
