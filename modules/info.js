@@ -12,9 +12,8 @@ export const cpuUsage = async () => {
   return usage;
 };
 
-export const add = () => {
-  const interfaces = os.networkInterfaces();
-  return os.networkInterfaces()[Object.keys(interfaces)[0]][0].cidr;
+export const cores = () => {
+  return os.cpus().length;
 };
 
 export const uptime = () => {

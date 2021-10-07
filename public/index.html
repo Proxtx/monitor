@@ -11,10 +11,15 @@
     <div id="logon">
       <div class="box backgroundBlue">
         <h1 class="boxTitle">Monitor</h1>
-        <input placeholder="password" class="input" type="password" />
+        <input
+          placeholder="password"
+          class="input"
+          type="password"
+          id="password"
+        />
       </div>
     </div>
-    <div id="main component">
+    <div id="main" class="component">
       <div class="box backgroundBlue">
         <h1 class="boxTitle">Monitor</h1>
       </div>
@@ -29,8 +34,8 @@
           <div class="widgetValue">{ramUsed}mb</div>
         </div>
         <div class="widgetProperty">
-          ADD
-          <div class="widgetValue">{add}</div>
+          CORES
+          <div class="widgetValue">{cores}</div>
         </div>
       </div>
       <div class="widgetBox backgroundRed">
@@ -50,7 +55,7 @@
       </div>
       <div class="widgetBox backgroundGrey">
         <h1 class="widgetBoxTitle">SERVICE</h1>
-        <button class="widgetButton">OPEN</button>
+        <button class="widgetButton" onclick="openService()">OPEN</button>
       </div>
     </div>
 

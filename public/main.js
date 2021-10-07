@@ -1,3 +1,9 @@
+import { componentObj } from "./f_xHtml/xHtml.js";
+
+let isPwd = window.localStorage.getItem("pwd") ? true : false;
+
+let pwd = isPwd ? window.localStorage.getItem("pwd") : "pwd";
+
 let scroll = [
   document.getElementById("logon"),
   document.getElementById("main"),
@@ -19,7 +25,6 @@ function scrollLeft() {
 }
 
 initScroll();
-scrollLeft();
 
 const Fetch = async (url, json = {}) => {
   return await (
@@ -33,4 +38,38 @@ const Fetch = async (url, json = {}) => {
   ).json();
 };
 
-console.log(await Fetch("./api/info/info"));
+async function updateStatsLoop() {
+  componentObj.watcher.replace(await apiRequest());
+  window.setTimeout(updateStatsLoop, 3000);
+}
+
+async function apiRequest() {
+  return await Fetch("./api/info/info", { pwd });
+}
+
+let password = document.getElementById("password");
+password.addEventListener("keyup", async (e) => {
+  if (e.key == "Enter") {
+    pwd = password.value;
+    if ((await apiRequest()).success) {
+      window.localStorage.setItem("pwd", pwd);
+      await updateStatsLoop();
+      scrollLeft();
+    }
+  }
+});
+
+let serviceLink = (await Fetch("./api/info/serviceLink")).link;
+
+function openService() {
+  window.open(serviceLink);
+}
+
+window.openService = openService;
+
+if (isPwd) {
+  if ((await apiRequest()).success) {
+    await updateStatsLoop();
+    scrollLeft();
+  }
+}
