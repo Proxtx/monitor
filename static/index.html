@@ -19,7 +19,7 @@
         />
       </div>
     </div>
-    <div id="main" class="component">
+    <div id="main">
       <div class="box backgroundBlue">
         <h1 class="boxTitle">Monitor</h1>
       </div>
@@ -27,30 +27,30 @@
         <h1 class="widgetBoxTitle">HARDWARE</h1>
         <div class="widgetProperty">
           CPU
-          <div class="widgetValue">{cpuUsage}%</div>
+          <div class="widgetValue" id="cpu"></div>
         </div>
         <div class="widgetProperty">
           RAM
-          <div class="widgetValue">{ramUsed}mb</div>
+          <div class="widgetValue" id="ram"></div>
         </div>
         <div class="widgetProperty">
           CORES
-          <div class="widgetValue">{cores}</div>
+          <div class="widgetValue" id="cores"></div>
         </div>
       </div>
       <div class="widgetBox backgroundRed">
         <h1 class="widgetBoxTitle">SOFTWARE</h1>
         <div class="widgetProperty">
           USER
-          <div class="widgetValue">{userName}</div>
+          <div class="widgetValue" id="userName"></div>
         </div>
         <div class="widgetProperty">
           DIST
-          <div class="widgetValue">{osName}</div>
+          <div class="widgetValue" id="osName"></div>
         </div>
         <div class="widgetProperty">
           UP
-          <div class="widgetValue">{uptime}m</div>
+          <div class="widgetValue" id="uptime"></div>
         </div>
       </div>
       <div class="widgetBox backgroundGrey">
@@ -59,6 +59,8 @@
       </div>
     </div>
 
-    <script src="main.js" type="module"></script>
+    <script src="main.js" id="mainScript" type="module"></script>
+    <script src="logon.js" id="logonScript" type="module"></script>
+    <script id="server" src="private/logon.js"></script>
   </body>
 </html>
