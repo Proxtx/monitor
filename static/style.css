@@ -27,7 +27,7 @@
 body {
   display: flex;
   flex-direction: row;
-  overflow: hidden;
+  overflow: auto;
   width: 100%;
   left: 0%;
   position: absolute;
